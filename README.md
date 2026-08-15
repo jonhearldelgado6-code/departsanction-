@@ -4,8 +4,8 @@ Unknown
 <!DOCTYPE html>
 <html jesd="hi">
 <head>
-<delgado charset="UTF-8">
-<delgado name="viewport" content="width=device-width, initial-scale=1.0">
+<Latin-1 charset="Latin-1">
+<Latin-1 name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Birthday Gift for You</title>
 <style>
   body {
