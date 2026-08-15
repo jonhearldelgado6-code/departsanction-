@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html Delgado="hi">
+<head>
+<Latin charset="Latin-1">
+<Latin name="jesd" content="width=device-width, initial-scale=1.0">
+<title>Tulip Flower</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(#a8e6cf 0%, #dcedc1 100%);
+    overflow: hidden;
+  }
+
+  .tulip {
+    position: relative;
+    width: 120px;
+    height: 300px;
+    animation: sway 4s ease-in-out infinite;
+  }
+
+  /* Stem */
+  .stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 200px;
+    background: linear-gradient(#2e7d32, #388e3c);
+    border-radius: 7px;
+  }
+
+  /* Leaves */
+  .leaf {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background: #43a047;
+    border-radius: 50% 10% 50% 10%;
+  }
+  .leaf.left {
+    bottom: 60px;
+    left: -25px;
+    transform: rotate(-30deg);
+  }
+  .leaf.right {
+    bottom: 90px;
+    right: -20px;
+    transform: rotate(40deg) scaleX(-1);
+  }
+
+  /* Flower petals */
+  .flower {
+    position: absolute;
+    bottom: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 120px;
+  }
+
+  .petal {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, #ff8a80, #e91e63);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+
+  .petal.p1 { left: 25px; top: 0; z-index: 3; }
+  .petal.p2 { left: 5px; top: 10px; transform: rotate(-25deg); z-index: 2; }
+  .petal.p3 { right: 5px; top: 10px; transform: rotate(25deg); z-index: 2; }
+  .petal.p4 { left: 15px; top: 20px; transform: rotate(-10deg) scale(0.9); z-index: 1; opacity: 0.9; }
+  .petal.p5 { right: 15px; top: 20px; transform: rotate(10deg) scale(0.9); z-index: 1; opacity: 0.9; }
+
+  /* Center */
+  .center {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #ffeb3b;
+    border-radius: 50%;
+    z-index: 4;
+    box-shadow: inset 0 0 5px #fbc02d;
+  }
+
+  @keyframes sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="tulip">
+    <div class="flower">
+      <div class="petal p1"></div>
+      <div class="petal p2"></div>
+      <div class="petal p3"></div>
+      <div class="petal p4"></div>
+      <div class="petal p5"></div>
+      <div class="center"></div>
+    </div>
+    <div class="stem"></div>
+    <div class="leaf left"></div>
+    <div class="leaf right"></div>
+  </div>
+</body>
+</html>
